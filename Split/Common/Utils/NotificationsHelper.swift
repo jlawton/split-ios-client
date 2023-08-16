@@ -48,7 +48,7 @@ class DefaultNotificationHelper: NotificationHelper {
     private let queue = DispatchQueue(label: "split-notification-helper", attributes: .concurrent)
     private var actions = [String: [ObserverAction]]()
 
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
 
 #if swift(>=4.2)
     static let didEnterBgNotification = UIApplication.didEnterBackgroundNotification
